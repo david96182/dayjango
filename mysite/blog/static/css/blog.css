@@ -1,11 +1,11 @@
 body {
     margin:0;
     padding:0;
-    font-family:helvetica, sans-serif;
+    font-family: Amiko;
 }
 
 a {
-    color:#00abff;
+    color:#29AB87;
     text-decoration:none;
 }
 
@@ -39,6 +39,15 @@ p.date {
     font-family: georgia, serif;
     font-size: 12px;
     font-style: italic;
+}
+
+hr {
+    width: 20%; /* Adjust the width to make it shorter */
+    height: 2px; /* Add extra height */
+    background-color: rgba(0, 0, 0, 0.1); /* Set the color to black with 50% opacity */
+    border: none; /* Remove the border */
+    margin-left: auto; /* Center the hr element */
+    margin-right: auto;
 }
 
 /* pagination */

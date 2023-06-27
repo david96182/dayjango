@@ -5,6 +5,8 @@
 <head>
     <title>{% block title %}{% endblock %}</title>
     <link href="{% static "css/blog.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Amiko" rel="stylesheet">
 </head>
 <body>
     <div id="content">
@@ -12,11 +14,16 @@
         {% endblock %}
     </div>
     <div id="sidebar">
-        <h2>My blog</h2>
+        <h2>Dayjango</h2>
         <p>
           This is my blog.
           {% total_posts %} posts so far.
         </p>
+        <h3>
+          <a href="{% url 'blog:post_search' %}">
+            <i class="fas fa-search"></i> Search
+          </a> 
+        </h3>
         <p>
           <a href="{% url "blog:post_feed" %}">Subscribe to the RSS feed</a>
         </p>
