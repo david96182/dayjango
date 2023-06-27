@@ -1,3 +1,8 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     margin:0;
     padding:0;
@@ -32,6 +37,17 @@ h2 {
     padding:10px;
     background:#efefef;
     height:100%;
+}
+
+.footer {
+    background-color: #3AB09E; /* Green color */
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px; /* Adjust this value according to your desired footer height */
+    line-height: 10px; /* Aligns the text vertically in the center */
+    text-align: center;
 }
 
 p.date {
