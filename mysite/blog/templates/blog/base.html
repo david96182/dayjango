@@ -7,6 +7,7 @@
     <link href="{% static "css/blog.css" %}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Amiko" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3R1SGvyf31P2kGp9K" crossorigin="anonymous">
 </head>
 <body>
     <div id="content">
@@ -14,11 +15,9 @@
         {% endblock %}
     </div>
     <div id="sidebar">
-        <h2>Dayjango</h2>
-        <p>
-          This is my blog.
-          {% total_posts %} posts so far.
-        </p>
+        <a href="{% url "blog:post_list" %}">
+        <img src="{% static "img/logo.png" %}" alt="Logo" id="logo">
+        </a>  
         <h3>
           <a href="{% url 'blog:post_search' %}">
             <i class="fas fa-search"></i> Search
