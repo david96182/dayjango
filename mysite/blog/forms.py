@@ -1,5 +1,7 @@
 from django import forms
 from .models import Comment
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Field
 
 
 class EmailPostForm(forms.Form):
@@ -17,5 +19,5 @@ class CommentForm(forms.ModelForm):
 
 
 class SearchForm(forms.Form):
-    query = forms.CharField()
+    query = forms.CharField(label="Query")
 

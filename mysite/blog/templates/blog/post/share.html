@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
 
 {% block title %}Share a post{% endblock %}
 
@@ -9,9 +10,9 @@
     {% else %}
         <h1>Share "{{ post.title }}" by e-mail</h1>
         <form method="post">
-            {{ form.as_p }}
+            {{ form|crispy }}
             {% csrf_token %}
-            <input type="submit" value="Send e-mail">
+            <input type="submit" class="btn btn-success" value="Send e-mail">
         </form>
     {% endif %}
 {% endblock %}
