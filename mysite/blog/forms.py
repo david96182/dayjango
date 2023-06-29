@@ -1,7 +1,5 @@
 from django import forms
 from .models import Comment
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Field
 
 
 class EmailPostForm(forms.Form):
